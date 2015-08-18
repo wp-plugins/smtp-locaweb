@@ -1,8 +1,8 @@
 		<div class="wrap">
 			<div id="icon-options-general" class="icon32"><br /></div>
-			<span class="alignright"><a target="_blank" href="http://www.smtplw.com.br/"><img src="https://2e6874288eee3bf7ca22-d122329f808928cff1e9967578106854.ssl.cf1.rackcdn.com/smtp_locaweb-logo.png" alt="SmtpLocaweb" /></a></span>
-			<h2><?php _e( 'SmtpLocaweb' , 'smtp_locaweb' ); ?></h2>
-			<p>A <a target="_blank" href="http://www.smtplw.com.br/">SmtpLocaweb</a> account is required to use this plugin and the SmtpLocaweb service.</p>
+			<span class="alignright"><a target="_blank" href="http://www.smtplw.com.br/"><img src="http://www.locaweb.com.br/images/lw2013/logo-lw160x36.png" alt="SMTP Locaweb" /></a></span>
+			<h2><?php _e( 'SMTP Locaweb' , 'smtp_locaweb' ); ?></h2>
+			<p>A <a target="_blank" href="http://www.smtplw.com.br/">SMTP Locaweb</a> account is required to use this plugin and the SMTP Locaweb service.</p>
 			<p>If you need to register for an account, you can do so at <a target="_blank" href="http://www.locaweb.com.br/produtos/smtp-locaweb.html">www.locaweb.com.br/produtos/smtp-locaweb</a>.</p>
 			<form id="smtp_locaweb-form" action="options.php" method="post">
 				<?php settings_fields( 'smtp_locaweb' ); ?>
@@ -14,7 +14,7 @@
 						</th>
 						<td>
 							<input type="text" class="regular-text" name="smtp_locaweb[username]" value="<?php esc_attr_e( $this->get_option( 'username' ) ); ?>" placeholder="postmaster" />
-							<p class="description"><?php _e( 'Your SmtpLocaweb SMTP username.', 'smtp_locaweb' ); ?></p>
+							<p class="description"><?php _e( 'Your SMTP username.', 'smtp_locaweb' ); ?></p>
 						</td>
 					</tr>
 					<tr valign="top" class="smtp_locaweb-smtp">
@@ -23,7 +23,7 @@
 						</th>
 						<td>
 							<input type="text" class="regular-text" name="smtp_locaweb[password]" value="<?php esc_attr_e( $this->get_option( 'password' ) ); ?>" placeholder="my-password" />
-							<p class="description"><?php _e( 'Your SmtpLocaweb SMTP password that goes with the above username.', 'smtp_locaweb' ); ?></p>
+							<p class="description"><?php _e( 'Your SMTP password.', 'smtp_locaweb' ); ?></p>
 						</td>
 					</tr>
 					<tr valign="top" class="smtp_locaweb-smtp">
@@ -44,7 +44,7 @@
 						</th>
 						<td>
 							<input type="text" class="regular-text" name="smtp_locaweb[from_email]" value="<?php esc_attr_e( $this->get_option( 'from_email' ) ); ?>" placeholder="postmaster@domain.com" />
-							<p class="description"><?php _e( 'Your SmtpLocaweb SMTP from_email. Should be authorized in <a href="https://smtplw.com.br/panel/settings/emails">https://smtplw.com.br/panel/settings/emails</a>.	', 'smtp_locaweb' ); ?></p>
+							<p class="description"><?php _e( 'Your FROM email. Should be authorized in <a href="https://smtplw.com.br/panel/settings/emails">https://smtplw.com.br/panel/settings/emails</a>.	', 'smtp_locaweb' ); ?></p>
 						</td>
 					</tr>
 					<tr valign="top" class="smtp_locaweb-smtp">
@@ -53,7 +53,7 @@
 						</th>
 						<td>
 							<input type="text" class="regular-text" name="smtp_locaweb[from_name]" value="<?php esc_attr_e( $this->get_option( 'from_name' ) ); ?>" placeholder="postmaster" />
-							<p class="description"><?php _e( 'Your from name.', 'smtp_locaweb' ); ?></p>
+							<p class="description"><?php _e( 'Your FROM name.', 'smtp_locaweb' ); ?></p>
 						</td>
 					</tr>
 				</table>
