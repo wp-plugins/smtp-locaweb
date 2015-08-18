@@ -38,6 +38,24 @@
 							<p class="description"><?php _e( 'Set this to "No" if your server cannot establish SSL SMTP connections or if emails are not being delivered. If you set this to "No" your password will be sent in plain text. Only valid for use with SMTP. Default "Yes".', 'smtp_locaweb' ); ?></p>
 						</td>
 					</tr>
+					<tr valign="top" class="smtp_locaweb-smtp">
+						<th scope="row">
+							<?php _e( 'From e-mail' , 'smtp_locaweb' ); ?>
+						</th>
+						<td>
+							<input type="text" class="regular-text" name="smtp_locaweb[from_email]" value="<?php esc_attr_e( $this->get_option( 'from_email' ) ); ?>" placeholder="postmaster" />
+							<p class="description"><?php _e( 'Your SmtpLocaweb SMTP from_email. Only valid for use with SMTP.', 'smtp_locaweb' ); ?></p>
+						</td>
+					</tr>
+					<tr valign="top" class="smtp_locaweb-smtp">
+						<th scope="row">
+							<?php _e( 'From name' , 'smtp_locaweb' ); ?>
+						</th>
+						<td>
+							<input type="text" class="regular-text" name="smtp_locaweb[from_name]" value="<?php esc_attr_e( $this->get_option( 'from_name' ) ); ?>" placeholder="postmaster" />
+							<p class="description"><?php _e( 'Your SmtpLocaweb SMTP from_name. Only valid for use with SMTP.', 'smtp_locaweb' ); ?></p>
+						</td>
+					</tr>
 				</table>
 				<p><?php _e( 'Before attempting to test the configuration, please click "Save Changes".', 'smtp_locaweb' ); ?></p>
 				<p class="submit">

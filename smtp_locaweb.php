@@ -57,7 +57,8 @@ class SmtpLocaweb {
     $username = ( defined( 'SMTP_LOCAWEB_USERNAME' ) && SMTP_LOCAWEB_USERNAME ) ? SMTP_LOCAWEB_USERNAME : $this->get_option( 'username' );
     $password = ( defined( 'SMTP_LOCAWEB_PASSWORD' ) && SMTP_LOCAWEB_PASSWORD ) ? SMTP_LOCAWEB_PASSWORD : $this->get_option('password');
     $secure = ( defined( 'SMTP_LOCAWEB_SECURE' ) && SMTP_LOCAWEB_SECURE ) ? SMTP_LOCAWEB_SECURE : $this->get_option('secure');
-    $sender = ( defined( 'SMTP_LOCAWEB_SENDER' ) && SMTP_LOCAWEB_SENDER ) ? SMTP_LOCAWEB_SENDER : $this->get_option('sender');
+    $from_email = ( defined( 'SMTP_LOCAWEB_FROM_EMAIL' ) && SMTP_LOCAWEB_FROM_EMAIL ) ? SMTP_LOCAWEB_FROM_EMAIL : $this->get_option('from_email');
+    $from_name = ( defined( 'SMTP_LOCAWEB_FROM_NAME' ) && SMTP_LOCAWEB_FROM_NAME ) ? SMTP_LOCAWEB_FROM_NAME : $this->get_option('from_name');
 
     $phpmailer->Mailer = 'smtp';
     $phpmailer->SMTPSecure = (bool) $secure ? 'ssl' : 'none';
@@ -66,6 +67,8 @@ class SmtpLocaweb {
     $phpmailer->SMTPAuth = true;
     $phpmailer->Username = $username;
     $phpmailer->Password = $password;
+    // $phpmailer->SMTPDebug = 1;
+    $phpmailer->SetFrom($from_email, $from_name);
   }
 
   /**

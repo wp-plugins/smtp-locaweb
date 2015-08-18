@@ -16,6 +16,12 @@ class SmtpLocawebAdmin extends SmtpLocaweb {
 		// Activation hook
 		register_activation_hook( $this->plugin_file, array( &$this, 'init' ) );
 
+		// Hook into admin_init and register settings and potentially register an admin_notice
+		add_action( 'admin_init', array( &$this, 'admin_init' ) );
+
+		// Activate the options page
+		add_action( 'admin_menu', array( &$this , 'admin_menu' ) );
+
 		// Register an AJAX action for testing mail sending capabilities
 		add_action( 'wp_ajax_smtp_locaweb-test', array( &$this, 'ajax_send_test' ) );
 	}
@@ -31,7 +37,8 @@ class SmtpLocawebAdmin extends SmtpLocaweb {
 			'username' => '',
 			'password' => '',
 			'secure' => '1',
-			'track-clicks' => '',
+			'from_email' => '',
+			'from_name' => '',
 		);
 		if ( ! $this->options ) {
 			$this->options = $defaults;
@@ -223,7 +230,7 @@ class SmtpLocawebAdmin extends SmtpLocaweb {
 			);
 		}
 
-		$secure = ( defined( 'MAILGUN_SECURE' ) && MAILGUN_SECURE ) ? MAILGUN_SECURE : $this->get_option( 'secure' );
+		$secure = ( defined( 'SMTP_LOCAWEB_SECURE' ) && SMTP_LOCAWEB_SECURE ) ? SMTP_LOCAWEB_SECURE : $this->get_option( 'secure' );
 		$method = ( (bool) $secure ) ? __( 'Secure SMTP', 'smtp_locaweb' ) : __( 'SMTP', 'smtp_locaweb' );
 
 		$admin_email = get_option( 'admin_email' );
