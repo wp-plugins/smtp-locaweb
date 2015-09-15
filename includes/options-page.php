@@ -22,7 +22,7 @@
 							<?php _e( 'Password' , 'smtp_locaweb' ); ?>
 						</th>
 						<td>
-							<input type="text" class="regular-text" name="smtp_locaweb[password]" value="<?php esc_attr_e( $this->get_option( 'password' ) ); ?>" placeholder="my-password" />
+							<input type="password" class="regular-text" name="smtp_locaweb[password]" value="<?php esc_attr_e( $this->get_option( 'password' ) ); ?>" placeholder="my-password" />
 							<p class="description"><?php _e( 'Your SMTP password.', 'smtp_locaweb' ); ?></p>
 						</td>
 					</tr>
