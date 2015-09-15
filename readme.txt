@@ -53,15 +53,16 @@ SMTP_LOCAWEB_FROM_NAME   Type: string
 
 == Upgrade Notice ==
 
-= 1.0 =
-
-Re-release to update versioning to start at 1.0 instead of 0.1
-
-= 0.1 =
+= 0.1.0 =
 
 Initial Release
 
 == ChangeLog ==
+
+= 0.1.1 =
+
+* changed password input type to password
+* when testings smtp settings, shows error details if something wrong happens
 
 = 0.1 (2015-08-11): =
 * Initial Release
