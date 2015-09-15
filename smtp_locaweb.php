@@ -67,7 +67,9 @@ class SmtpLocaweb {
     $phpmailer->SMTPAuth = true;
     $phpmailer->Username = $username;
     $phpmailer->Password = $password;
-    // $phpmailer->SMTPDebug = 1;
+    if($GLOBALS['smtp_debug']){
+      $phpmailer->SMTPDebug = 1;
+    }
     $phpmailer->SetFrom($from_email, $from_name);
   }
 
