@@ -59,6 +59,10 @@ Initial Release
 
 == ChangeLog ==
 
+= 0.1.2 =
+
+* better description for field "Use Secure SMTP"
+
 = 0.1.1 =
 
 * changed password input type to password

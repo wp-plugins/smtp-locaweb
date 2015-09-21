@@ -3,7 +3,7 @@
  * Plugin Name:  SmtpLocaweb
  * Plugin URI:   http://wordpress.org/extend/plugins/smtp_locaweb/
  * Description:  SMTP Locaweb integration for WordPress
- * Version:      0.1.1
+ * Version:      0.1.2
  * Author:       Fabio Perrella
  * Author URI:   http://github.com/fabioperrella
  * License:      GPLv2 or later

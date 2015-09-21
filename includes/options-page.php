@@ -35,7 +35,7 @@
 								<option value="1"<?php selected( '1' , $this->get_option( 'secure' ) ); ?>><?php _e( 'Yes' , 'smtp_locaweb' ); ?></option>
 								<option value="0"<?php selected( '0' , $this->get_option( 'secure' ) ); ?>><?php _e( 'No' , 'smtp_locaweb' ); ?></option>
 							</select>
-							<p class="description"><?php _e( 'Set this to "No" if your server cannot establish SSL SMTP connections or if emails are not being delivered. If you set this to "No" your password will be sent in plain text. Default "Yes".', 'smtp_locaweb' ); ?></p>
+							<p class="description"><?php _e( 'Set this to "No" if your server cannot establish SSL SMTP connections through port 465 or if emails are not being delivered. If you set this to "No" your password will be sent in plain text through port 587. Default "Yes".', 'smtp_locaweb' ); ?></p>
 						</td>
 					</tr>
 					<tr valign="top" class="smtp_locaweb-smtp">
